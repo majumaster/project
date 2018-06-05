@@ -45,8 +45,12 @@ const allGra = {
 			const obraz = document.createElement('div');
 			obraz.classList.add('styleKart');
 			this.divPlansza.appendChild(obraz);
+			
+			obraz.addEventListener('click', this.obrazClick.bind(this));
 		}
-		 document.querySelector('.start').addEventListener('click', function() {
-        allGra.(rozpoczGre);
-    });
+		obrazClick : function(e) {
+			if(!klockZazn[0] || )
+		}
+		document.querySelector('.start').addEventListener('click', function() {
+         allGra.(rozpoczGre);});
 	}
