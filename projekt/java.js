@@ -25,9 +25,19 @@ const allGra = {
         this.divPlansza.innerHTML = '';
 		this.divWynik = document.querySelector('.wynik');
 		this.divWynik.innerHTML = '';
-		
 		this.klockiLos = [];
         this.klockiZazn = [];
         this.iloscRuch = 0;
+		
+		 for (let i=0; i<liczbKlock; i++) {
+            this.klocki.push(Math.floor(i/2));//zapisywanie liczb obrazow parami
+        }
+		//losowanie numerow dla obrazkow
+		 for (let i=this.liczbKlock-1; i>0; i--) {
+            const los = Math.floor(Math.random()*i);
+            const obrazek = this.klocki[i];
+            this.klocki[i] = this.klocki[los];
+			this.klocki[los] = obrazek;
+        }
 		
 	}
