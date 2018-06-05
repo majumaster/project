@@ -20,7 +20,7 @@ const allGra = {
         'obrazek_10.jpg'
     ]
 }
-	this.start=function (){
+	this.rozpoczGre=function (){
 		this.divPlansza = document.querySelector('.plansza');
         this.divPlansza.innerHTML = '';
 		this.divWynik = document.querySelector('.wynik');
@@ -40,4 +40,13 @@ const allGra = {
 			this.klocki[los] = obrazek;
         }
 		
+		//układanie obrazków na planszy
+		for(let i=0; i<liczbKlock; i++){
+			const obraz = document.createElement('div');
+			obraz.classList.add('styleKart');
+			this.divPlansza.appendChild(obraz);
+		}
+		 document.querySelector('.start').addEventListener('click', function() {
+        allGra.(rozpoczGre);
+    });
 	}
