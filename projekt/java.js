@@ -71,7 +71,20 @@ const allGra = {
                 this.divWynik.innerHTML = this.iloscRuch;
             }
         
-		}
+		},
+		usunKlocek : function() {
+        this.klockiZazn[0].remove();
+        this.klockiZazn[1].remove();
+
+        this.canGet = true;//po usunieniu dobrze wybranej pary umozliwienie dalszego zaznaczania
+        this.klockiZazn = [];
+
+        this.klockiPary++;
+        if (this.klockiPary >= this.liczbKlock / 2) {
+            alert('Koniec gry: Wygrales!!');
+        }
+    },
+
 		document.querySelector('.start').addEventListener('click', function() {
          allGra.(rozpoczGre);});
 	}
