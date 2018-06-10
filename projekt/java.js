@@ -84,6 +84,13 @@ const allGra = {
             alert('Koniec gry: Wygrales!!');
         }
     },
+	schowajKlocek : function() {
+        this.klockiZazn[0].style.backgroundImage = 'url(obrazek.jpg)';
+        this.klockiZazn[1].style.backgroundImage = 'url(obrazek.jpg)';
+
+        this.klockiZazn = [];
+        this.canGet = true;
+    },
 
 		document.querySelector('.start').addEventListener('click', function() {
          allGra.(rozpoczGre);});
