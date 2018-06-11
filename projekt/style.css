@@ -16,10 +16,10 @@
 	border: 2px solid #ddd;
 	background: #fff;
 	}
-	.stylKart {
+	.styleKart {
     position: absolute;
     cursor: pointer;
     width: 100px;
     height: 100px;
-    background: #f6da17 url(images/title.png) center center no-repeat;
+    background: #9de600 url(klockiLos.jpg) center center no-repeat;
 }

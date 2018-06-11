@@ -27,6 +27,8 @@ const allGra = {
 		this.klockiLos = [];
         this.klockiZazn = [];
         this.iloscRuch = 0;
+		this.canGet = true;
+        this.klockiPary = 0;
 		
 		 for (let i=0; i<this.liczbKlock; i++) {
             this.klockiLos.push(Math.floor(i/2));//zapisywanie liczb obrazow parami
@@ -46,6 +48,9 @@ const allGra = {
 			this.divPlansza.appendChild(obraz);
 			obraz.dataset.cardType = this.klockiLos[i];
             obraz.dataset.index = i;
+			 console.log(5+(obraz.offsetWidth+5)*(i%this.liczbKlockRz))
+            obraz.style.left = 5+(obraz.offsetWidth+10)*(i%this.liczbKlockRz) + 'px'
+            obraz.style.top = 5+(obraz.offsetHeight+10)*(Math.floor(i/this.liczbKlockRz)) + 'px';
 
             obraz.addEventListener('click', this.obrazClick.bind(this));
         }
