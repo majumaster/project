@@ -1,13 +1,13 @@
 const allGra = {
-    liczbKlock : 20, 
+    liczbKlock : 20, //liczba klockow
     liczbKlockRz : 5, //klocki na rzad
-    divPlansza : null, 
-    divWynik : null, 
+    divPlansza : null,  //pusta plansza
+    divWynik : null,   //pusty wynik
     klockiLos : [], //tablica na wylosowane klocki
     klockiZazn : [], //klocki zaznaczone
     liczbRuch : 0, //liczba ruchów
     klockiImg : 
-	[ //obrazki
+	[ //obrazki klocki ktorymi bedziemy grac
         'obrazek_1.jpg',
         'obrazek_2.jpg',
         'obrazek_3.jpg',
@@ -19,7 +19,7 @@ const allGra = {
         'obrazek_9.jpg',
         'obrazek_10.jpg'
     ],
-	 rozpoczGre : function (){
+	 rozpoczGre : function (){ //funcja rozpoczyna gre na poczatku zeruje wszystkie najwazniejsze zmienne
 		this.divPlansza = document.querySelector('.plansza');
         this.divPlansza.innerHTML = '';
 		this.divWynik = document.querySelector('.wynik');
@@ -27,13 +27,13 @@ const allGra = {
 		this.klockiLos = [];
         this.klockiZazn = [];
         this.iloscRuch = 0;
-		this.canGet = true;
-        this.klockiPary = 0;
+		this.canGet = true; //umozliwia klikniecie na klocek
+        this.klockiPary = 0; //zerowanie znalezionych par
 		
 		 for (let i=0; i<this.liczbKlock; i++) {
-            this.klockiLos.push(Math.floor(i/2));//zapisywanie liczb obrazow parami
+            this.klockiLos.push(Math.floor(i/2));//zapisywanie liczb klockow parami
         }
-		//losowanie numerow dla obrazkow
+		//losowanie numerow
 		 for (let i=this.liczbKlock-1; i>0; i--) {
             const los = Math.floor(Math.random()*i);
             const obrazek = this.klockiLos[i];

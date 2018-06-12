@@ -21,5 +21,6 @@
     cursor: pointer;
     width: 100px;
     height: 100px;
-    background: #9de600 url(klockiLos.jpg) center center no-repeat;
+	background: #9de600 center center no-repeat;
+    /*background: #9de600 url(startowy.jpg) center center no-repeat;  z obrazkiem startowym na razie go nie ma*/
 }
